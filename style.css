@@ -16,29 +16,36 @@ body{
 }
 #painel-principal{
     border: 1px solid black;
-    margin: 20px 0px 0px 0px;
+    margin: 20px auto 0px auto;
     padding: 0px 0px 0px 0px;
     align-items: center;
     text-align: center;
+    max-width: 1500px;
 
 }
 #painel-navegacao{
     border: 1px solid black;
     margin: 0px 0px 0px 0px;
-    padding: 100px 100px 100px 100px;
-    display: inline-flex;
-
+    padding: 0px 0px 0px 0px;
+    display: block;
 }
 #painel-conteudo{
     border: 1px solid black;
     margin: 0px 0px 0px 0px;
-    padding: 100px 100px 100px 100px;
+    padding: 0px 0px 0px 0px;
     display: inline-flex;
-
+    max-width: 600px;
 }
 #footer{
     border: 1px solid black;
-    margin: 25px 0px 0px 0px;
+    margin: 25px auto 0px auto;
     padding: 0px 0px 0px 0px;
-
+    text-align: center;
+    align-items: center;
+    max-width: 300px;
+}
+#produto, #cliente, #estoque{
+    align-items: center;
+    text-align: center;
+    display: none;
 }

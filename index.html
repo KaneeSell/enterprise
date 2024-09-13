@@ -11,8 +11,32 @@
         <h2 class="title">Enterprise Project</h2>
     </header>
     <main id="painel-principal">
-        <div id="painel-navegacao"></div>
-        <div id="painel-conteudo"></div>
+        <div id="painel-navegacao">
+            <input class="navegadores" type="button" value="Cliente" onclick="ativCliente()">
+            <input class="navegadores" type="button" value="Produto" onclick="ativProduto()">
+            <input class="navegadores" type="button" value="Estoque" onclick="ativEstoque()">
+        </div>
+        <div id="painel-conteudo">
+            <div id="cliente">
+                <form id="formCliente">
+                <h2>Cliente</h2>
+                <label for="inputNomeCliente">*Cliente</label>
+                <input type="text" name="cliente" id="inputNomeCliente">
+                <label for="inputAtivoCliente">*Ativo?</label>
+                <input type="checkbox" name="ativo?" id="inputAtivoCliente" checked>
+                <input type="submit" value="Criar" onclick="criarCliente(event)">
+                </form>
+            </div>
+            <div id="produto">
+                <h2>Produto</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus enim iure, nobis voluptatum sapiente reiciendis cupiditate officia iste cumque perspiciatis quibusdam eius, ullam nisi numquam at exercitationem a, doloribus earum.</p>
+            </div>
+            <div id="estoque">
+                <h2>Estoque</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, architecto enim hic, mollitia, dolorem voluptas eveniet velit atque est consectetur quas! Rem pariatur ratione cum corrupti ipsum dolores voluptates quaerat.</p>
+            </div>
+            <script src="./script.js"></script>
+        </div>
     </main>
     <footer id="footer">
         <p>By Kanee</p>
