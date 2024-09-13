@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* Corpo */
+body{
+    background-color: rgb(153, 210, 210);
+}
+#cabecalho{
+    border: 1px solid black;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+}
+.title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+#painel-principal{
+    border: 1px solid black;
+    margin: 20px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    align-items: center;
+    text-align: center;
+
+}
+#painel-navegacao{
+    border: 1px solid black;
+    margin: 0px 0px 0px 0px;
+    padding: 100px 100px 100px 100px;
+    display: inline-flex;
+
+}
+#painel-conteudo{
+    border: 1px solid black;
+    margin: 0px 0px 0px 0px;
+    padding: 100px 100px 100px 100px;
+    display: inline-flex;
+
+}
+#footer{
+    border: 1px solid black;
+    margin: 25px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+}
