@@ -1,43 +1,75 @@
 @charset "UTF-8";
 /* Corpo */
 body{
-    background-color: rgb(153, 210, 210);
+    background-color: lightcyan;
+    font-size: 20px;
 }
 #cabecalho{
+    background-color: #84f7f7;
     border: 1px solid black;
-    margin: 0px 0px 0px 0px;
+    margin: 0px auto 0px auto;
     padding: 0px 0px 0px 0px;
     text-align: center;
+    max-width: 290px;
+    border-radius: 30px;
+}
+#logTeste{
+    align-items: center;
+    text-align: center;
+    margin: 0px auto 0px auto;
 }
 .title{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
 }
 #painel-principal{
-    border: 1px solid black;
     margin: 20px auto 0px auto;
     padding: 0px 0px 0px 0px;
     align-items: center;
     text-align: center;
-    max-width: 1500px;
-
+    max-width: 600px;
+}
+nav{
+    align-items: center;
+    text-align: center;
 }
 #painel-navegacao{
-    border: 1px solid black;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px auto 0px auto;
+    padding: 10px 0px 10px 0px;
+    max-width: 400px;
     display: block;
 }
-#painel-conteudo{
+.navegadores{
+    background-color: transparent;
+    color: black;
     border: 1px solid black;
+    border-radius: 20px;
+    margin: 0px 10px 0px 10px;
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;
+    transform: scale(1);
+    transition: 0.5s;
+}
+.navegadores:hover{
+    background-color: #84f7f7;
+    transform: scale(1.2);
+}
+.navegadores:active{
+    transition: 0.1s;
+    background-color: #7bbaba;
+    color: antiquewhite;
+}
+#painel-conteudo{
     margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 15px 10px 15px;
     display: inline-flex;
     max-width: 600px;
 }
 #footer{
+    background-color: #84f7f78f;
     border: 1px solid black;
+    border-radius: 30px;
     margin: 25px auto 0px auto;
     padding: 0px 0px 0px 0px;
     text-align: center;
@@ -48,4 +80,87 @@ body{
     align-items: center;
     text-align: center;
     display: none;
+}
+#formCliente, #formProcurarCliente{
+    display: none;
+}
+#erroNomeCadastro{
+    color: red;
+}
+.divCliente{
+    background-color: #84f7f78f;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0px auto 10px auto;
+    padding: 0px 0px 0px 0px;
+    height: auto;
+    width: 250px;
+}
+.divCliente>h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px 0px 0px;
+}
+.divCliente>.atv{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px 0px 0px;
+    background-color: mediumspringgreen;
+    border-radius: 0px 0px 10px 10px;
+}
+.divCliente>.ina{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px 0px 0px;
+    background-color: indianred;
+    border-radius: 0px 0px 10px 10px;
+}
+.editarCliente{
+    background-color: transparent;
+    color: black;  
+    margin: 5px 20px 0px 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    pointer-events: painted;
+}
+.editarCliente:hover{
+    background-color: gray;
+    color: white;
+}
+.removeCliente{
+    background-color: transparent;
+    color: red;
+    margin: 5px 0px 0px 20px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.removeCliente:hover{
+    background-color: indianred;
+    color: white;
+}
+#procurarCadastro{
+    margin: 10px 0px 0px 0px;
+}
+#principal{
+    display: block;
+}
+.botao{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 0px 10px 0px 10px;
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;
+}
+.botao:hover{
+    background-color: #84f7f7;
+}
+.botao:active{
+    transition: 0.1s;
+    background-color: #7bbaba;
+    color: antiquewhite;
+}
+#inputNomeCliente, #inputNomeProcuraCliente{
+    margin: 0px 0px 10px 0px;
 }
