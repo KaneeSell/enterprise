@@ -8,7 +8,7 @@
 </head>
 <body>
     <header id="cabecalho">
-        <h2 class="title">Enterprise Project</h2>
+        <h2 class="title" onclick="teste()">Enterprise Project</h2>
     </header>
     <nav id="painel-navegacao">
         <input class="navegadores" type="button" value="Cliente" onclick="ativCliente()">
@@ -19,6 +19,7 @@
     <main id="painel-principal">
         <div id="painel-conteudo">
             <div id="principal">
+                <script src="./script.js"></script>
                 <h2>Bem Vindo!</h2>
                 <p>
                     Para Fins de Estudo. Este site comporta cadastro de clientes, produto e estoque.<br><br>
@@ -30,13 +31,14 @@
                 <li>Editar Clientes</li>
             </div>
             <div id="cliente">
+                <script src="cliente.js"></script>
                 <h2>Cliente</h2>
                 <input type="button" value="Cadastrar" class="botao" onclick="ativCadastro()">
                 <input type="button" value="Procurar" class="botao" onclick="ativProcurarCliente()">
                 <form id="formCliente">
                     <p>Cadastrar:</p>
                     <label for="inputNomeCliente">*Nome:</label>
-                    <input type="text" name="cliente" id="inputNomeCliente">
+                    <input type="text" name="cliente" id="inputNomeCliente" size="10px">
                     <label for="inputAtivoCliente">Ativo?</label>
                     <input type="checkbox" name="ativo?" id="inputAtivoCliente" checked>
                     <input class="botao" type="submit" value="Criar" onclick="criarCliente(event)">
@@ -45,24 +47,30 @@
                 <form id="formProcurarCliente">
                     <p>Procurar:</p>
                     <label for="inputNomeProcuraCliente">Nome:</label>
-                    <input type="text" name="cliente" id="inputNomeProcuraCliente"  oninput="procurarCliente(event)">
-                    <br>
-                    <label for="inputProcurarAtivoCliente">Ativos?</label>
+                    <input type="text" name="cliente" id="inputNomeProcuraCliente"  oninput="procurarCliente(event)" size="10px">
+                    <!-- <label for="inputProcurarAtivoCliente">Ativos?</label>
                     <input type="checkbox" name="ativo?" id="inputProcurarAtivoCliente" checked oninput="procurarCliente(event)">
-                    <label for="inputInativoCliente" oninput="procurarCliente(event)">Inativos?</label>
-                    <input type="checkbox" name="inativo?" id="inputInativoCliente" checked>
+                    <label for="inputInativoCliente" oninput="procurarCliente(event)">Inativos?</xclabel>
+                    <input type="checkbox" name="inativo?" id="inputInativoCliente" checked oninput="procurarCliente(event)"> -->
+                    <select name="statusSeletor" id="statusSeletor">
+                        <option value="" oninput="procurarCliente(event)">Todos</option>
+                        <option value="Sim" oninput="procurarCliente(event)">Ativos</option>
+                        <option value="Não" oninput="procurarCliente(event)">Inativos</option>
+                    </select>
+                    <input type="button" value="Procurar" oninput="procurarCliente(event)">
                     <div id="procurarCadastro"></div>
                 </form>
             </div>
             <div id="produto">
+                <script src="produto.js"></script>
                 <h2>Produto</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus enim iure, nobis voluptatum sapiente reiciendis cupiditate officia iste cumque perspiciatis quibusdam eius, ullam nisi numquam at exercitationem a, doloribus earum.</p>
             </div>
             <div id="estoque">
+                <script src="estoque.js"></script>
                 <h2>Estoque</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, architecto enim hic, mollitia, dolorem voluptas eveniet velit atque est consectetur quas! Rem pariatur ratione cum corrupti ipsum dolores voluptates quaerat.</p>
             </div>
-            <script src="./script.js"></script>
         </div>
     </main>
     <footer id="footer">
