@@ -80,7 +80,7 @@ nav{
     text-align: center;
     display: none;
 }
-#formCliente, #formProcurarCliente{
+#formCliente, #formProcurarCliente, #formProduto, #formProcurarProduto{
     display: none;
 }
 #erroNomeCadastroCliente, #erroNomeCadastroProduto{

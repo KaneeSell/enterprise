@@ -13,7 +13,7 @@ function ativCliente(){
     }
 }
 //Ativar div Cadastro
-function ativCadastro(){
+function ativCadastroCliente(){
     var propriedadeCadastro = elementoStyle("formCliente", "display")
     if(propriedadeCadastro == "none"){
         document.getElementById("formCliente").style.display = "block"
