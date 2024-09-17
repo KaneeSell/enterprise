@@ -138,6 +138,9 @@ nav{
 #principal{
     display: block;
 }
+#principal>h3{
+    font-weight: 600;
+}
 .botao{
     background-color: transparent;
     color: black;
