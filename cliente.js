@@ -118,10 +118,10 @@ function procurarCliente(e = ''){
     const procurarCadastro = document.getElementById('procurarCadastro')
     const clientes = JSON.parse(localStorage.getItem("clientes"))
     var nomeCliente = document.forms["formProcurarCliente"]["inputNomeProcuraCliente"].value
-    var statusAtivoCliente = document.forms["formProcurarCliente"]["inputProcurarAtivoCliente"].checked? "Sim":"Não"
-    var statusInativoCliente = document.forms["formProcurarCliente"]["inputProcurarAtivoCliente"].checked? "Sim":"Não"
-    var statusInativoCliente = document.forms["formProcurarCliente"]["inputProcurarAtivoCliente"].checked? "Sim":"Não"
+    // var statusAtivoCliente = document.forms["formProcurarCliente"]["inputProcurarAtivoCliente"].checked? "Sim":"Não"
+    // var statusInativoCliente = document.forms["formProcurarCliente"]["inputProcurarAtivoCliente"].checked? "Sim":"Não"
     let x = true
+    var statusSeletor = document.forms["formProcurarCliente"]["statusSeletor"].value
     let achados = 0
     let logClientes = ''
     for(let i = 0; x == true;i++){
@@ -129,26 +129,26 @@ function procurarCliente(e = ''){
             // teste('Entro na condicional!')
             let nomeClientetesteget = clientes[i].nome
             let ativoClientetesteget = clientes[i].ativo
-            let inativoClientetesteget = clientes[i].ativo? "Não":"Sim"
-            var statusSeletor = document.getElementById["statusSeletor"].value
+            // var statusSeletor = document.getElementById["statusSeletor"].value
             let verificador = true
             let divClientes = `<div class="divCliente"><input type="button" value="editar" class="editarCliente" onclick="editarCliente(${i})"><input type="button" value="Apagar" class="removeCliente" onclick="removeCliente(${i})"><h3>${nomeClientetesteget}</h3><h4 class="${ativoClientetesteget =="Sim"?"atv":"ina"}">${ativoClientetesteget =="Sim"?"Ativo":"Inativo"}</h4></div>`
-            if(nomeClientetesteget == nomeCliente && verificador == true && (ativoClientetesteget == statusSeletor || statusSeletor == '')){
-                verificador == false
+            if(nomeClientetesteget == nomeCliente && (ativoClientetesteget == statusSeletor || statusSeletor == '')){
+                verificador = false
                 achados++
                 logClientes += divClientes
             }
-            if(ativoClientetesteget == statusSeletor && nomeCliente == ''){
-                verificador == false
+            if(ativoClientetesteget == statusSeletor && nomeCliente == '' && verificador == true){
+                verificador = false
                 achados++
                 logClientes += divClientes
             }
-            if(inativoClientetesteget == statusSeletor && nomeCliente == ''){
-                verificador == false
+            if(ativoClientetesteget == statusSeletor && nomeCliente == '' && verificador == true){
+                verificador = false
                 achados++
                 logClientes += divClientes
             }
-            if(statusSeletor == '' && nomeCliente == '' && verificador == false){
+            if(statusSeletor == '' && nomeCliente == '' && verificador == true){
+                verificador = false
                 achados++
                 logClientes += divClientes
             }
@@ -156,7 +156,7 @@ function procurarCliente(e = ''){
         else{x = false}
     }
     if(achados > 0){
-    procurarCadastro.innerHTML = `${achados} Clientes encontrados:<br>${logClientes}`
+    procurarCadastro.innerHTML = `${achados} Clientes encontrados:<br><br>${logClientes}`
     }
     else{
     procurarCadastro.innerHTML = 'Nenhum Cliente Encontrado!'

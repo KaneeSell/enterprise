@@ -52,12 +52,12 @@
                     <input type="checkbox" name="ativo?" id="inputProcurarAtivoCliente" checked oninput="procurarCliente(event)">
                     <label for="inputInativoCliente" oninput="procurarCliente(event)">Inativos?</xclabel>
                     <input type="checkbox" name="inativo?" id="inputInativoCliente" checked oninput="procurarCliente(event)"> -->
-                    <select name="statusSeletor" id="statusSeletor">
-                        <option value="" oninput="procurarCliente(event)">Todos</option>
-                        <option value="Sim" oninput="procurarCliente(event)">Ativos</option>
-                        <option value="Não" oninput="procurarCliente(event)">Inativos</option>
+                    <select name="statusSeletor" id="statusSeletor" oninput="procurarCliente(event)">
+                        <option value="">Todos</option>
+                        <option value="Sim">Ativos</option>
+                        <option value="Não">Inativos</option>
                     </select>
-                    <input type="button" value="Procurar" oninput="procurarCliente(event)">
+                    <input type="button" type="submit" value="Procurar" onclick="procurarCliente(event)">
                     <div id="procurarCadastro"></div>
                 </form>
             </div>
@@ -74,7 +74,7 @@
         </div>
     </main>
     <footer id="footer">
-        <p>By Kanee</p>
+        <p></p>
     </footer>
 </body>
 </html>
