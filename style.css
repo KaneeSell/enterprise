@@ -1,16 +1,17 @@
 @charset "UTF-8";
 /* Corpo */
 body{
-    background-color: rgb(235, 235, 235);
-    font-size: 20px;
+background-image: linear-gradient(red, blue);
+    font-size: 25px;
 }
 #cabecalho{
-    background-color: #fd6161;
-    border: 1px outset black;
+    background-image: linear-gradient(rgb(250, 67, 67), rgb(33, 33, 253));    
+    border: 5px outset black;
     margin: 1px auto 0px auto;
     padding: 0px 0px 0px 0px;
     text-align: center;
-    border-radius: px;
+    border-radius: 7px;
+    max-width: 300px;
 }
 #logTeste{
     align-items: center;
@@ -42,7 +43,7 @@ nav{
 .navegadores{
     background-color: rgb(255, 98, 98);
     color: black;
-    border: 1px  black;
+    border: 2px outset  rgb(109, 103, 103);
     border-radius: 20px;
     margin: 0px 10px 0px 10px;
     padding: 10px 10px 10px 10px;
