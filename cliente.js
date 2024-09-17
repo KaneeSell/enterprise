@@ -83,7 +83,6 @@ function editarCliente(i){
     let novoNome = prompt("Novo nome:")
     if(novoNome == null || novoNome == ""){novoNome = nomeAntigo}
     let novoStatus = confirm("Ativo?")?"Sim":"Não";
-    alert(novoNome + " = " + novoStatus)
     clientes[i].nome = novoNome;
     clientes[i].ativo = novoStatus;
     localStorage.setItem("clientes", JSON.stringify(clientes));

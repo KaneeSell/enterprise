@@ -84,7 +84,6 @@ function editarProduto(i){
     let novoNome = prompt("Novo nome:")
     if(novoNome == null || novoNome == ""){novoNome = nomeAntigo}
     let novoStatus = confirm("Ativo?")?"Sim":"Não";
-    alert(novoNome + " = " + novoStatus)
     produtos[i].nome = novoNome;
     produtos[i].ativo = novoStatus;
     localStorage.setItem("produtos", JSON.stringify(produtos));
