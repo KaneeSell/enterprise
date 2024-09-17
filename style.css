@@ -1,8 +1,10 @@
 @charset "UTF-8";
 /* Corpo */
 body{
-background-image: linear-gradient(red, blue);
+    background-image: linear-gradient(red, blue);
     font-size: 25px;
+    text-align: center;
+    align-items: center;
 }
 #cabecalho{
     background-image: linear-gradient(rgb(250, 67, 67), rgb(33, 33, 253));    
@@ -65,16 +67,6 @@ nav{
     padding: 0px 15px 10px 15px;
     display: inline-flex;
     max-width: 600px;
-}
-#footer{
-    background-color: #84f7f78f;
-    border: 1px solid black;
-    border-radius: 30px;
-    margin: 25px auto 0px auto;
-    padding: 0px 0px 0px 0px;
-    text-align: center;
-    align-items: center;
-    max-width: 300px;
 }
 #produto, #cliente, #estoque{
     align-items: center;
@@ -215,4 +207,68 @@ nav{
 .removeProduto:hover{
     background-color: indianred;
     color: white;
+}
+/*Footer*/
+.devNames{
+    display: block;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: black;
+    padding: 2px 6px 2px 6px;
+    margin: 15px 30px 10px 70px;
+    transform: scale(1);
+    transition: 0.2s;
+}
+.devNames:hover{
+    color: white;
+    transform: scale(1.05);
+}
+.devNames:active{
+    background-color: #336767;
+    color: gray;
+}
+#footer{
+    background-color: #84f7f78f;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin: 10px auto 0px auto;
+    padding: 0px 0px 30px 0px;
+    text-align: center;
+    align-items: center;
+    max-width: 400px;
+}
+.devFooter{
+    display: -webkit-inline-box;
+    margin: -10px 0px -10px -80px;
+}
+.botaoContato{
+    display: contents;
+    margin: 0px 0px 0px 0px;
+    padding: 5px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    color: #ffffff;
+    background-color: rgb(49, 39, 115, 0.7);
+    box-shadow: 1px 1px 3px 0px black;
+    text-shadow: 1px 1px 3px #000000c7;
+    text-decoration: none;
+    font-size: 20px;
+}
+.botaoContato:hover{
+    color: #dfd985;
+}
+.botaoContato:active{
+    box-shadow: inset 1px 1px 2px black;
+    color: black;
+}
+.ico-contato{
+    display: inline-block;
+    margin: 0px 5px -3px 0px;
+    transform: scale(1);
+    transition: 0.5s;
+}
+.botaoContato:hover > .ico-contato{
+    transform: scale(1.3);
 }
