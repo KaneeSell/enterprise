@@ -28,7 +28,7 @@
             <div id="cliente">
                 <script src="cliente.js"></script>
                 <h2>Cliente</h2>
-                <input type="button" value="Cadastrar" class="botao" onclick="ativCadastro()">
+                <input type="button" value="Cadastrar" class="botao" onclick="ativCadastroCliente()">
                 <input type="button" value="Procurar" class="botao" onclick="ativProcurarCliente()">
                 <form id="formCliente">
                     <p>Cadastrar:</p>
@@ -37,29 +37,48 @@
                     <label for="inputAtivoCliente">Ativo?</label>
                     <input type="checkbox" name="ativo?" id="inputAtivoCliente" checked>
                     <input class="botao" type="submit" value="Criar" onclick="criarCliente(event)">
-                    <div id="erroNomeCadastro"></div>
+                    <div id="erroNomeCadastroCliente"></div>
                 </form>
                 <form id="formProcurarCliente">
                     <p>Procurar:</p>
                     <label for="inputNomeProcuraCliente">Nome:</label>
                     <input type="text" name="cliente" id="inputNomeProcuraCliente"  oninput="procurarCliente(event)" size="10px">
-                    <!-- <label for="inputProcurarAtivoCliente">Ativos?</label>
-                    <input type="checkbox" name="ativo?" id="inputProcurarAtivoCliente" checked oninput="procurarCliente(event)">
-                    <label for="inputInativoCliente" oninput="procurarCliente(event)">Inativos?</xclabel>
-                    <input type="checkbox" name="inativo?" id="inputInativoCliente" checked oninput="procurarCliente(event)"> -->
-                    <select name="statusSeletor" id="statusSeletor" oninput="procurarCliente(event)">
+                    <select name="statusSeletorCliente" id="statusSeletorCliente" oninput="procurarCliente(event)">
                         <option value="">Todos</option>
                         <option value="Sim">Ativos</option>
                         <option value="Não">Inativos</option>
                     </select>
                     <input type="button" type="submit" value="Procurar" onclick="procurarCliente(event)">
-                    <div id="procurarCadastro"></div>
+                    <div id="procurarCadastroCliente"></div>
                 </form>
             </div>
+            <!-- Produtos -->
             <div id="produto">
                 <script src="produto.js"></script>
                 <h2>Produto</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus enim iure, nobis voluptatum sapiente reiciendis cupiditate officia iste cumque perspiciatis quibusdam eius, ullam nisi numquam at exercitationem a, doloribus earum.</p>
+                <input type="button" value="Cadastrar" class="botao" onclick="ativCadastroProduto()">
+                <input type="button" value="Procurar" class="botao" onclick="ativProcurarProduto()">
+                <form id="formProduto">
+                    <p>Cadastrar:</p>
+                    <label for="inputNomeProduto">*Nome:</label>
+                    <input type="text" name="produto" id="inputNomeProduto" size="10px">
+                    <label for="inputAtivoProduto">Ativo?</label>
+                    <input type="checkbox" name="ativo?" id="inputAtivoProduto" checked>
+                    <input class="botao" type="submit" value="Criar" onclick="criarProduto(event)">
+                    <div id="erroNomeCadastroProduto"></div>
+                </form>
+                <form id="formProcurarProduto">
+                    <p>Procurar:</p>
+                    <label for="inputNomeProcuraProduto">Nome:</label>
+                    <input type="text" name="produto" id="inputNomeProcuraProduto"  oninput="procurarProduto(event)" size="10px">
+                    <select name="statusSeletorProduto" id="statusSeletorProduto" oninput="procurarProduto(event)">
+                        <option value="">Todos</option>
+                        <option value="Sim">Ativos</option>
+                        <option value="Não">Inativos</option>
+                    </select>
+                    <input type="button" type="submit" value="Procurar" onclick="procurarProduto(event)">
+                    <div id="procurarCadastroProduto"></div>
+                </form>
             </div>
             <div id="estoque">
                 <script src="estoque.js"></script>

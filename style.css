@@ -84,7 +84,7 @@ nav{
 #formCliente, #formProcurarCliente{
     display: none;
 }
-#erroNomeCadastro{
+#erroNomeCadastroCliente, #erroNomeCadastroProduto{
     color: red;
 }
 .divCliente{
@@ -163,4 +163,56 @@ nav{
 }
 #inputNomeCliente, #inputNomeProcuraCliente{
     margin: 0px 0px 10px 0px;
+}
+/*Produtos*/
+.divProduto{
+    background-color: #84f7f78f;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0px auto 10px auto;
+    padding: 0px 0px 0px 0px;
+    height: auto;
+    width: 250px;
+}
+.divProduto>h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px 0px 0px;
+}
+.divProduto>.atv{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px 0px 0px;
+    background-color: mediumspringgreen;
+    border-radius: 0px 0px 10px 10px;
+}
+.divProduto>.ina{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px 0px 0px;
+    background-color: indianred;
+    border-radius: 0px 0px 10px 10px;
+}
+.editarProduto{
+    background-color: transparent;
+    color: black;  
+    margin: 5px 20px 0px 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    pointer-events: painted;
+}
+.editarProduto:hover{
+    background-color: gray;
+    color: white;
+}
+.removeProduto{
+    background-color: transparent;
+    color: red;
+    margin: 5px 0px 0px 20px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.removeProduto:hover{
+    background-color: indianred;
+    color: white;
 }
