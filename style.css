@@ -24,6 +24,7 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     font-weight: 600;
+    pointer-events: none;
 }
 #painel-principal{
     margin: 20px auto 1px auto;
@@ -37,8 +38,8 @@ nav{
     text-align: center;
 }
 #painel-navegacao{
-    margin: 0px auto 0px auto;
-    padding: 10px 0px 10px 0px;
+    margin: 0px auto -30px auto;
+    padding: 10px 0px 0px 0px;
     max-width: 400px;
     display: block;
 }
@@ -47,15 +48,16 @@ nav{
     color: black;
     border: 2px outset  rgb(109, 103, 103);
     border-radius: 20px;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px -10px 10px;
     padding: 10px 10px 10px 10px;
     font-size: 15px;
+    font-weight: 600;
     transform: scale(1);
     transition: 0.5s;
 }
 .navegadores:hover{
     background-color: #84f7f7;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .navegadores:active{
     transition: 0.1s;
@@ -64,7 +66,7 @@ nav{
 }
 #painel-conteudo{
     margin: 0px 0px 0px 0px;
-    padding: 0px 15px 10px 15px;
+    padding: 0px 0px 10px 15px;
     display: inline-flex;
     max-width: 600px;
 }
@@ -211,7 +213,7 @@ nav{
 /*Footer*/
 .devNames{
     display: block;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 900;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
@@ -230,14 +232,19 @@ nav{
     color: gray;
 }
 #footer{
-    background-color: #84f7f78f;
+    background-image: linear-gradient(rgb(250, 67, 67), rgb(33, 33, 253));  
     border: 1px solid black;
     border-radius: 30px;
     margin: 10px auto 0px auto;
     padding: 0px 0px 30px 0px;
     text-align: center;
     align-items: center;
-    max-width: 400px;
+    max-width: 370px;
+}
+#footer>p{
+    font-size: 20px;
+    font-weight: 600;
+    pointer-events: none;
 }
 .devFooter{
     display: -webkit-inline-box;
