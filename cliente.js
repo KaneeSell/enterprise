@@ -1,6 +1,6 @@
 //Ativar div Cliente
 function ativCliente(){
-    var propriedadeCliente = elementoStyle("cliente", "display")
+    let propriedadeCliente = elementoStyle("cliente", "display")
     if(propriedadeCliente == "none"){
         document.getElementById("principal").style.display = "none"
         document.getElementById("cliente").style.display = "block"
@@ -14,7 +14,7 @@ function ativCliente(){
 }
 //Ativar div Cadastro
 function ativCadastroCliente(){
-    var propriedadeCadastro = elementoStyle("formCliente", "display")
+    let propriedadeCadastro = elementoStyle("formCliente", "display")
     if(propriedadeCadastro == "none"){
         document.getElementById("formCliente").style.display = "block"
         document.getElementById("formProcurarCliente").style.display = "none"
@@ -50,7 +50,7 @@ function criarCliente(e){
                 let cpfEcnpjClienteget = clientes[i].cpfEcnpj
                 if(nomeClientetesteget == nomeCliente){x = false}
                 if(cpfEcnpjClienteget == cpfEcnpjCliente){x = false}
-                erroNomeCadastroCliente.innerText = 'Já Existe Cliente com esse nome!'
+                erroNomeCadastroCliente.innerText = 'Já Existe Cliente com esse nome ou CPF/CNPJ!'
             }
             else{
                 x = false
@@ -65,14 +65,14 @@ function criarCliente(e){
             }
         }
         if(achados > 0){
-            procurarCadastroCliente.innerText = `${achados} Clientes encontrados com mesmo nome!`
+            procurarCadastroCliente.innerText = `${achados} Clientes encontrados com mesmo nome ou CPF/CNPJ!`
         }
         else{
         }
 
     }
     else {
-        erroNomeCadastroCliente.innerText = 'Informar nome do Cliente!'
+        erroNomeCadastroCliente.innerText = 'Informar nome do Cliente e CPF/CNPJ!'
     }
 }
 //Remover Cliente
@@ -101,7 +101,7 @@ function editarCliente(i){
 
 //Ativar div Procurar Clientes
 function ativProcurarCliente(){
-    var propriedadeCadastro = elementoStyle("formProcurarCliente", "display")
+    let propriedadeCadastro = elementoStyle("formProcurarCliente", "display")
     if(propriedadeCadastro == "none"){
         document.getElementById("formProcurarCliente").style.display = "block"
         document.getElementById("formCliente").style.display = "none"
@@ -123,9 +123,9 @@ function procurarCliente(e = ''){
     if(!(JSON.parse(localStorage.getItem('clientes')))){localStorage.setItem('clientes', JSON.stringify([]))}
     const procurarCadastroCliente = document.getElementById('procurarCadastroCliente')
     const clientes = JSON.parse(localStorage.getItem("clientes"))
-    var nomeCliente = document.forms["formProcurarCliente"]["inputNomeProcuraCliente"].value
+    let nomeCliente = document.forms["formProcurarCliente"]["inputNomeProcuraCliente"].value
     let x = true
-    var statusSeletorCliente = document.forms["formProcurarCliente"]["statusSeletorCliente"].value
+    let statusSeletorCliente = document.forms["formProcurarCliente"]["statusSeletorCliente"].value
     let achados = 0
     let logClientes = ''
     for(let i = 0; x == true;i++){

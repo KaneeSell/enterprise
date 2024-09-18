@@ -1,6 +1,6 @@
 //Ativar div Produtos
 function ativProduto(){
-    var propriedadeProduto = elementoStyle("produto", "display")
+    let propriedadeProduto = elementoStyle("produto", "display")
     if(propriedadeProduto == "none"){
         document.getElementById("principal").style.display = "none"
         document.getElementById("cliente").style.display = "none"
@@ -15,7 +15,7 @@ function ativProduto(){
 
 //Ativar div Cadastro
 function ativCadastroProduto(){
-    var propriedadeCadastroProduto = elementoStyle("formProduto", "display")
+    let propriedadeCadastroProduto = elementoStyle("formProduto", "display")
     if(propriedadeCadastroProduto == "none"){
         document.getElementById("formProduto").style.display = "block"
         document.getElementById("formProcurarProduto").style.display = "none"
@@ -32,9 +32,9 @@ function ativCadastroProduto(){
 function criarProduto(e){
     e.preventDefault();
     if(!(JSON.parse(localStorage.getItem('produtos')))){localStorage.setItem('produtos', JSON.stringify([]))}
-    var nomeProduto = document.forms["formProduto"]["inputNomeProduto"].value
+    let nomeProduto = document.forms["formProduto"]["inputNomeProduto"].value
     document.forms["formProduto"]["inputNomeProduto"].value = ''
-    var statusProduto = document.forms["formProduto"]["inputAtivoProduto"].checked? "Sim":"Não"
+    let statusProduto = document.forms["formProduto"]["inputAtivoProduto"].checked? "Sim":"Não"
     document.forms["formProduto"]["inputAtivoProduto"].checked = true
     const erroNomeCadastroProduto = document.getElementById("erroNomeCadastroProduto")
     const produtos = JSON.parse(localStorage.getItem("produtos"))
@@ -95,7 +95,7 @@ function editarProduto(i){
 
 //Ativar div Procurar Produtos
 function ativProcurarProduto(){
-    var propriedadeCadastroProduto = elementoStyle("formProcurarProduto", "display")
+    let propriedadeCadastroProduto = elementoStyle("formProcurarProduto", "display")
     if(propriedadeCadastroProduto == "none"){
         document.getElementById("formProcurarProduto").style.display = "block"
         document.getElementById("formProduto").style.display = "none"
@@ -117,9 +117,9 @@ function procurarProduto(e = ''){
     if(!(JSON.parse(localStorage.getItem('produtos')))){localStorage.setItem('produtos', JSON.stringify([]))}
     const procurarCadastroProduto = document.getElementById('procurarCadastroProduto')
     const produtos = JSON.parse(localStorage.getItem("produtos"))
-    var nomeProduto = document.forms["formProcurarProduto"]["inputNomeProcuraProduto"].value
+    let nomeProduto = document.forms["formProcurarProduto"]["inputNomeProcuraProduto"].value
     let x = true
-    var statusSeletorProduto = document.forms["formProcurarProduto"]["statusSeletorProduto"].value
+    let statusSeletorProduto = document.forms["formProcurarProduto"]["statusSeletorProduto"].value
     let achadosProdutos = 0
     let logProdutos = ''
     for(let i = 0; x == true;i++){
