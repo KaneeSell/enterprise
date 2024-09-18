@@ -1,19 +1,21 @@
 @charset "UTF-8";
 /* Corpo */
 body{
-    background-image: linear-gradient(red, blue);
+    background-image: linear-gradient(rgb(232, 148, 39), rgba(253, 232, 100, 0.411));
     font-size: 25px;
     text-align: center;
     align-items: center;
+    background-attachment: fixed;
 }
 #cabecalho{
-    background-image: linear-gradient(rgb(250, 67, 67), rgb(33, 33, 253));    
+    background-image: linear-gradient(rgb(255, 237, 120), rgb(254, 91, 46));    
     border: 5px outset black;
     margin: 1px auto 0px auto;
     padding: 0px 0px 0px 0px;
     text-align: center;
     border-radius: 7px;
     max-width: 300px;
+    box-shadow: 4px 1px 1px rgb(0, 0, 0);
 }
 #logTeste{
     align-items: center;
