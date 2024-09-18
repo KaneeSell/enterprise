@@ -31,30 +31,37 @@ function ativCadastroCliente(){
 function criarCliente(e){
     e.preventDefault();
     if(!(JSON.parse(localStorage.getItem('clientes')))){localStorage.setItem('clientes', JSON.stringify([]))}
-    var nomeCliente = document.forms["formCliente"]["inputNomeCliente"].value
-    document.forms["formCliente"]["inputNomeCliente"].value = ''
-    var statusCliente = document.forms["formCliente"]["inputAtivoCliente"].checked? "Sim":"Não"
-    document.forms["formCliente"]["inputAtivoCliente"].checked = true
-    const erroNomeCadastroCliente = document.getElementById("erroNomeCadastroCliente")
     const clientes = JSON.parse(localStorage.getItem("clientes"))
-    if(nomeCliente != ""){
+    const erroNomeCadastroCliente = document.getElementById("erroNomeCadastroCliente")
+                    /*<-elementos inputs(pegar e limpar campos)->*/ 
+    const nomeCliente = document.forms["formCliente"]["inputNomeCliente"].value
+    document.forms["formCliente"]["inputNomeCliente"].value = ''
+    const statusCliente = document.forms["formCliente"]["inputAtivoCliente"].checked? "Sim":"Não"
+    document.forms["formCliente"]["inputAtivoCliente"].checked = true
+    const cpfEcnpjCliente = document.getElementById('inputCnpjCliente').value
+    const cpfEcnpjClienteChk = document.getElementById('cb5').checked? 'CNPJ':'CPF'
+             /*<-Inicio do Loop para adicionar itens no LocalStorage->*/
+    if(nomeCliente != "" && cpfEcnpjCliente != ''){
         let achados = 0
         let x = true
         for(let i = 0; x == true;i++){
             if(clientes[i] && clientes[i].nome){
                 let nomeClientetesteget = clientes[i].nome
+                let cpfEcnpjClienteget = clientes[i].cpfEcnpj
                 if(nomeClientetesteget == nomeCliente){x = false}
+                if(cpfEcnpjClienteget == cpfEcnpjCliente){x = false}
                 erroNomeCadastroCliente.innerText = 'Já Existe Cliente com esse nome!'
             }
             else{
                 x = false
-                clientes.push({ 'nome': nomeCliente, 'ativo': statusCliente });
+                clientes.push({ 'nome': nomeCliente, 'cpfEcnpj': cpfEcnpjCliente,'ativo': statusCliente });
                 // Atualiza o localStorage com a nova lista de clientes
                 localStorage.setItem("clientes", JSON.stringify(clientes));
                 let nomeClienteteste = JSON.parse(localStorage.getItem("clientes"))[i].nome
+                let cpfEcnpjClienteteste = JSON.parse(localStorage.getItem("clientes"))[i].cpfEcnpj
                 let ativoClienteteste = JSON.parse(localStorage.getItem("clientes"))[i].ativo
-                erroNomeCadastroCliente.innerText = `Cliente Criado com Sucesso!
-                Nome: ${nomeClienteteste}, Ativo? ${ativoClienteteste}`
+                erroNomeCadastroCliente.innerHTML = `<p class="sucessCliente">Cliente Criado com Sucesso!<br>
+                Nome: ${nomeClienteteste}, ${cpfEcnpjClienteChk}: ${cpfEcnpjClienteteste}, Ativo? ${ativoClienteteste}</p>`
             }
         }
         if(achados > 0){
@@ -125,8 +132,9 @@ function procurarCliente(e = ''){
         if(clientes[i] && clientes[i].nome){
             let nomeClientetesteget = clientes[i].nome
             let ativoClientetesteget = clientes[i].ativo
+            let cpfEcnpjClientetesteget = clientes[i].cpfEcnpj
             let verificador = true
-            let divClientes = `<div class="divCliente"><input type="button" value="editar" class="editarCliente" onclick="editarCliente(${i})"><input type="button" value="Apagar" class="removeCliente" onclick="removeCliente(${i})"><h3>${nomeClientetesteget}</h3><h4 class="${ativoClientetesteget =="Sim"?"atv":"ina"}">${ativoClientetesteget =="Sim"?"Ativo":"Inativo"}</h4></div>`
+            let divClientes = `<div class="divCliente"><input type="button" value="editar" class="editarCliente" onclick="editarCliente(${i})"><input type="button" value="Apagar" class="removeCliente" onclick="removeCliente(${i})"><h3>${nomeClientetesteget}<br>${cpfEcnpjClientetesteget.length > 14? 'CNPJ:':'CPF:'}${cpfEcnpjClientetesteget}</h3><h4 class="${ativoClientetesteget =="Sim"?"atv":"ina"}">${ativoClientetesteget =="Sim"?"Ativo":"Inativo"}</h4></div>`
             if(nomeClientetesteget == nomeCliente && (ativoClientetesteget == statusSeletorCliente || statusSeletorCliente == '')){
                 verificador = false
                 achados++

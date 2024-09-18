@@ -17,7 +17,6 @@ function validar(){
     const mensagem = validarCPF(cpf)
     const cpfFormatado = aplicarMascara(cpf)
     document.getElementById('registro').innerHTML = `Registro:\nCPF: ${cpfFormatado}\nValido?${mensagem}`
-
 }
 function limpa(){
     const cpf = document.getElementById('inputCnpjCliente')

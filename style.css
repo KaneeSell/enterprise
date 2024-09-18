@@ -81,6 +81,9 @@ nav{
 #erroNomeCadastroCliente, #erroNomeCadastroProduto{
     color: red;
 }
+.sucessCliente{
+    color: green;
+}
 .divCliente{
     background-color: #84f7f78f;
     align-items: center;
