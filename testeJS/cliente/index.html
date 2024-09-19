@@ -42,16 +42,16 @@
             <form id="formProcurarCliente">
                 <p>Procurar:</p>
                 <label for="inputNomeProcuraCliente">Nome:</label>
-                <input type="text" name="cliente" id="inputNomeProcuraCliente"  oninput="procurarCliente(event)" size="10px">
+                <input type="text" name="cliente" id="inputNomeProcuraCliente" on oninput="procurarCliente(event)" size="10px">
                 <select name="statusSeletorCliente" id="statusSeletorCliente" oninput="procurarCliente(event)">
                     <option value="">Todos</option>
                     <option value="Sim">Ativos</option>
                     <option value="Não">Inativos</option>
                 </select><br>
-                <button class="links" id="download" onclick="baixarClientes()">Baixar Clientes</button>
-                <button class="links" id="download" onclick="zerarClientes()">Zerar</button>
+                <button class="links baixar" id="download" onclick="baixarClientes()">Baixar Clientes</button>
+                <button class="links zerar" id="download" onclick="zerarClientes()">Zerar</button>
                 <br>
-                <input type="file" class="links" id="upload" accept=".json">
+                <input type="file" class="upload" id="upload" accept=".json">
                 <div id="ClienteLogUpload"></div>
                 <div id="procurarCadastroClienteLog"></div>
                 <div id="procurarCadastroCliente"></div>

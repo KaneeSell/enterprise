@@ -1,11 +1,42 @@
-input[type="file"] {
-    background-color: #84f7f7;
+/*Zerar - Baixar - Upload*/
+.zerar:hover{
+    color: white;
+    box-shadow: 1px 1px 3px white;
+    background-color: lightcoral;
+}
+.baixar:hover{
+    color: white;
+    box-shadow: 1px 1px 3px white;
+    background-color: rgb(155, 220, 195);
+}
+.upload{
+    font-size: 15px;
+    font-weight: 600;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #afbbe1;
+    box-shadow: 1px 1px 3px black;
+    text-decoration: none;
+    color: black;
+}
+.upload:hover{
+    color: white;
+    box-shadow: 1px 1px 3px white;
+    background-color: cornflowerblue;
+}
+.upload:active{
+    box-shadow: inset 1px 3px black;
+    color: black;
+}
+.upload[type="file"] {
     height: 18px;
     width: 220px;
     font-size: 12px;
   }
 
-  input[type="file"]::file-selector-button {
+  .upload[type="file"]::file-selector-button {
+    color: black;
     background-color: transparent;
     border: none;
     border-radius: 5px;
