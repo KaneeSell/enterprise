@@ -13,8 +13,11 @@ header{
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
+    width: 100%;
+}
+h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 20px;
+    font-size: 45px;
     font-weight: 600;
     width: 200px;
     background-color: #afbbe1;
@@ -22,6 +25,7 @@ header{
     box-shadow: 1px 1px 3px black;
     border-radius: 20px;
 }
+
 nav{
     max-width: 400px;
     margin: 15px auto 15px auto;
