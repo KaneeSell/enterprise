@@ -3,113 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise</title>
+    <title>Teste</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 </head>
 <body>
-    <header id="cabecalho">
-        <h2 class="title" onclick="teste()">RK System</h2>
+    <header>
+        <h1>Alpha</h1>
     </header>
-    <nav id="painel-navegacao">
-        <!-- <input class="navegadores" type="button" value="Cliente" onclick="ativCliente()"> -->
-         <button class="navegadores" onclick="ativCliente()">Cliente</button>
-        <button class="navegadores" onclick="ativProduto()">Produto</button>
-        <button class="navegadores" onclick="ativEstoque()">Estoque</button>
+    <nav>
+        <a href="#"class="links link-desativo">Principal</a>
+        <a href="./cliente/index.html"class="links">Cliente</a>
+        <a href="./produto/index.html"class="links">Produto</a>
+        <a href="./estoque/index.html"class="links">Estoque</a>
     </nav>
-    <main id="painel-principal">
-        <div id="painel-conteudo">
-            <div id="principal">
-                <script src="./script.js"></script><br>
-                <h3>Sistema de Gestão RKS(Raging Kanee System)</h3>
-                <p>Projeto para fins de estudo, onde possui algumas funções como:</p>
-                <li>Cadastro de Clientes e Consultas</li>
-                <li>Cadastro de Produtos e Consultas </li>
-            </div>
-            <!-- Clientes -->
-            <div id="cliente">
-                <script src="cliente.js"></script>
-                <script src="validadorCPF.js"></script>
-                <h2>Cliente</h2>
-                <input type="button" value="Cadastrar" class="botao" onclick="ativCadastroCliente()">
-                <input type="button" value="Procurar" class="botao" onclick="ativProcurarCliente()">
-                <form id="formCliente">
-                    <p>Cadastrar:</p>
-                    <label for="inputNomeCliente">*Nome:</label>
-                    <input type="text" name="cliente" id="inputNomeCliente" size="20px"><br>
-                    <div class="checkbox-wrapper-10">
-                        <input class="tgl tgl-flip" id="cb5" type="checkbox" checked />
-                        <label class="tgl-btn" data-tg-off="CPF" data-tg-on="CNPJ" for="cb5"></label>
-                      </div>
-                    <input type="text" name="cliente" id="inputCnpjCliente" size="15px" maxlength="14" oninput="mascararCPF()"><br>
-                    <label for="inputAtivoCliente">Ativo?</label>
-                    <input type="checkbox" name="ativo?" id="inputAtivoCliente" checked>
-                    <input class="botao" type="submit" value="Criar" onclick="criarCliente(event)">
-                    <div id="erroNomeCadastroCliente"></div>
-                </form>
-                <form id="formProcurarCliente">
-                    <p>Procurar:</p>
-                    <label for="inputNomeProcuraCliente">Nome:</label>
-                    <input type="text" name="cliente" id="inputNomeProcuraCliente"  oninput="procurarCliente(event)" size="10px">
-                    <select name="statusSeletorCliente" id="statusSeletorCliente" oninput="procurarCliente(event)">
-                        <option value="">Todos</option>
-                        <option value="Sim">Ativos</option>
-                        <option value="Não">Inativos</option>
-                    </select>
-                    <div id="procurarCadastroCliente"></div>
-                </form>
-            </div>
-            <!-- Produtos -->
-            <div id="produto">
-                <script src="produto.js"></script>
-                <h2>Produto</h2>
-                <input type="button" value="Cadastrar" class="botao" onclick="ativCadastroProduto()">
-                <input type="button" value="Procurar" class="botao" onclick="ativProcurarProduto()">
-                <form id="formProduto">
-                    <p>Cadastrar:</p>
-                    <label for="inputNomeProduto">*Nome:</label>
-                    <input type="text" name="produto" id="inputNomeProduto" size="10px">
-                    <label for="inputAtivoProduto">Ativo?</label>
-                    <input type="checkbox" name="ativo?" id="inputAtivoProduto" checked>
-                    <input class="botao" type="submit" value="Criar" onclick="criarProduto(event)">
-                    <div id="erroNomeCadastroProduto"></div>
-                </form>
-                <form id="formProcurarProduto">
-                    <p>Procurar:</p>
-                    <label for="inputNomeProcuraProduto">Nome:</label>
-                    <input type="text" name="produto" id="inputNomeProcuraProduto"  oninput="procurarProduto(event)" size="10px">
-                    <select name="statusSeletorProduto" id="statusSeletorProduto" oninput="procurarProduto(event)">
-                        <option value="">Todos</option>
-                        <option value="Sim">Ativos</option>
-                        <option value="Não">Inativos</option>
-                    </select>
-                    <div id="procurarCadastroProduto"></div>
-                </form>
-            </div>
-            <!-- Estoque -->
-            <div id="estoque">
-                <script src="estoque.js"></script>
-                <h2>Estoque</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, architecto enim hic, mollitia, dolorem voluptas eveniet velit atque est consectetur quas! Rem pariatur ratione cum corrupti ipsum dolores voluptates quaerat.</p>
-            </div>
+    <main>
+        <div id="principal">
+            <h2>Bem Vindo!</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore id impedit recusandae reiciendis sint qui eos culpa debitis, maiores at odit quos incidunt. Voluptates voluptatibus doloribus nisi tenetur commodi recusandae.</p>
         </div>
     </main>
-    <!-- Footer -->
-    <footer id="footer">
-        <p class="btn">Devs:</p>
-        <hr color="black">
-        <div class="devFooter">
-            <a class="devNames" href="https://github.com/KaneeSell" target="_blank" rel="Externo GitHub">Kanee Sell</a>
-            <a class="botaoContato" href="https://github.com/KaneeSell" target="_blank" rel="Externo GitHub"><img src="../icons/github.ico" alt="github" width="20" class="ico-contato">Github</a>
-            <a class="botaoContato" href="https://wa.me/+5547991166401" target="_blank" rel="Externo"><img src="../icons/whatsapp.ico" alt="github" width="20" class="ico-contato">Whatsapp</a><br>
-            <a class="botaoContato" href="https://br.linkedin.com/in/daniel-henrique-sell" target="_blank" rel="Externo"><img src="../icons/linkedin.ico" alt="github" width="20" class="ico-contato">Linkedin</a>
-        </div>
-        <hr>
-        <div class="devFooter">
-            <a class="devNames" href="https://github.com/RagingWK" target="_blank" rel="Externo GitHub">RagingWK</a>
-            <a class="botaoContato" href="https://github.com/RagingWK" target="_blank" rel="Externo GitHub"><img src="../icons/github.ico" alt="github" width="20" class="ico-contato">Github</a>
-            <a class="botaoContato" href="https://wa.me/+5547991476617" target="_blank" rel="Externo"><img src="../icons/whatsapp.ico" alt="github" width="20" class="ico-contato">Whatsapp</a><br>
-            <a class="botaoContato" href="https://www.linkedin.com/in/lucas-floriano-7955b022b/" target="_blank" rel="Externo"><img src="../icons/linkedin.ico" alt="github" width="20" class="ico-contato">Linkedin</a>
-        </div>
-    </footer>
 </body>
 </html>
