@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Alpha</h1>
+    </header>
+    <nav>
+        <button class="links" type="button" onclick="ativaPrincipal()">Principal</button>
+        <button class="links" type="button" onclick="ativaCliente()">Cliente</button>
+        <button class="links" type="button" onclick="ativaProduto()">Produto</button>
+        <button class="links" type="button" onclick="ativaEstoque()">Estoque</button>
+    </nav>
+    <main>
+        <!-- Principal -->
+        <div id="principal">
+            <h2>Bem Vindo!</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore id impedit recusandae reiciendis sint qui eos culpa debitis, maiores at odit quos incidunt. Voluptates voluptatibus doloribus nisi tenetur commodi recusandae.</p>
+        </div>
+        <!-- Cliente -->
+        <div id="input-cliente">
+        <h2>Cliente</h2>
+        <br>
+        <form id="formCliente">
+            <div class="nomeInput">
+                <label for="nomeClienteCadastro">*Nome</label>
+                <input type="text" name="nomeClienteCadastro" id="nomeClienteCadastro">
+            </div>
+            <div class="cpfCnpjInput">
+                <label for="cpfCnpjClienteCadastro">*CPF/CNPJ</label>
+                <input type="text" name="cpfCnpjClienteCadastro" id="cpfCnpjClienteCadastro">
+            </div>
+            <div class="EmailInput">
+                <label for="EmailClienteCadastro">E-Mail</label>
+                <input type="text" name="emailClienteCadastro" id="emailClienteCadastro">
+            </div>
+        </form>
+        </div>
+        <div id="output-cliente"></div>
+        <!-- Produto -->
+        <div id="input-produto">
+        <h2>Produto</h2>
+        <br>
+        <form id="formProduto">
+            <div class="nomeInput">
+                <label for="nomeProdutoCadastro">*Nome</label>
+                <input type="text" name="nomeProdutoCadastro" id="nomeProdutoCadastro">
+            </div>
+            <label for="cpfCnpjProdutoCadastro">*CPF/CNPJ</label>
+            <input type="text" name="cpfCnpjProdutoCadastro" id="cpfCnpjProdutoCadastro">
+        </form>
+        <div id="output-produto"></div>
+        <!-- Estoque -->
+        <div id="input-estoque">
+        <h2>Estoque</h2>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore id impedit recusandae reiciendis sint qui eos culpa debitis, maiores at odit quos incidunt. Voluptates voluptatibus doloribus nisi tenetur commodi recusandae.</p>
+        </div>
+        <div id="output-estoque"></div>
+    </main>
+</body>
+</html>
