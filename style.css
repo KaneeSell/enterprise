@@ -1,20 +1,18 @@
 @charset "UTF-8";
 /* Corpo */
 body{
-    background-image: linear-gradient(rgb(232, 148, 39), rgba(253, 232, 100, 0.411));
+background-color: rgb(36, 35, 35);
     font-size: 25px;
     text-align: center;
     align-items: center;
     background-attachment: fixed;
 }
-#cabecalho{
-    background-image: linear-gradient(rgb(255, 237, 120), rgb(254, 91, 46));    
-    border: 5px outset black;
-    margin: 1px auto 0px auto;
-    padding: 0px 0px 0px 0px;
+#cabecalho{    
+    color: white;
+    border: 2px outset rgb(90, 89, 89);
+    margin: 0px auto 0px auto;
     text-align: center;
-    border-radius: 7px;
-    max-width: 300px;
+    max-width: 30000px;
     box-shadow: 4px 1px 1px rgb(0, 0, 0);
 }
 #logTeste{
@@ -23,9 +21,9 @@ body{
     margin: 0px auto 0px auto;
 }
 .title{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    font-weight: 700;
     pointer-events: none;
 }
 #painel-principal{
@@ -46,11 +44,14 @@ nav{
     display: block;
 }
 .navegadores{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-weight: 1000;
+    font-size: 16px;
     padding: 0.6em 2em;
     border: none;
     outline: none;
     color: rgb(255, 255, 255);
-    background: #111;
+    background: #000000;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -63,7 +64,7 @@ nav{
   .navegadores:before{
     content: "";
     background: linear-gradient(
-      45deg,
+      20deg,
       #ff0000,
       #ff7300,
       #fffb00,
@@ -77,7 +78,7 @@ nav{
     position: absolute;
     top: -2px;
     left: -2px;
-    background-size: 400%;
+    background-size: 800%;
     z-index: -1;
     filter: blur(5px);
     -webkit-filter: blur(5px);
@@ -99,14 +100,17 @@ nav{
       background-position: 0 0;
     }
   }
-  
+  .navegadores:hover {
+  transform: scale(1.1);
+  color: rgb(59, 59, 59);  
+  }
   .navegadores:after{
     z-index: -1;
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #222;
+    background: #000000;
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -187,9 +191,11 @@ nav{
 }
 #principal{
     display: block;
+    color: white;
 }
 #principal>h3{
     font-weight: 600;
+    color: white;
 }
 .botao{
     background-color: transparent;
