@@ -11,7 +11,7 @@ document.getElementById('upload').addEventListener('change', function(event) {
     
     if (file) {
         const reader = new FileReader();
-
+        
         reader.onload = function(e) {
             try {
                 // Parseia o conteúdo do arquivo JSON
@@ -37,7 +37,7 @@ document.getElementById('upload').addEventListener('change', function(event) {
                 setTimeout(resetLogUpload, 5000);
             }
         };
-
+        
         // Lê o arquivo como texto
         reader.readAsText(file);
     }
@@ -61,6 +61,17 @@ function baixarClientes() {
     // Libera o objeto URL
     URL.revokeObjectURL(link.href);
 };
+//Zerar Clientes
+function zerarClientes(){
+    const pass = prompt('Tem certeza que deseja Zerar todos os clientes cadastrados? Digite: ZERAR TUDO')
+    if(pass == 'ZERAR TUDO'){
+        localStorage.setItem('clientes', JSON.stringify([]));
+        alert('Operação Realizada com Sucesso!')
+    }
+    else{
+        alert('Operação ZERAR CLIENTES Abortada!')
+    }
+}
 //Ativar div Cliente
 function ativCliente(){
 }
