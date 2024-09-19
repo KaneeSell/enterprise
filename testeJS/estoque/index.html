@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+    <link rel="stylesheet" href="./estoque.css"> <!-- Style Estoque -->
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <script src="./estoque.js"></script> <!-- Script Estoque -->
+</head>
+<body>
+    <header>
+        <h1>Alpha</h1>
+    </header>
+    <nav>
+        <a href="../index.html"class="links">Principal</a>
+        <a href="../cliente/index.html"class="links">Cliente</a>
+        <a href="../produto/index.html"class="links">Produto</a>
+        <a href="#"class="links link-desativo">Estoque</a>
+    </nav>
+    <main>
+        <div id="input-estoque">
+        <h2>Estoque</h2>
+        <br>
+        <form id="formEstoque">
+            <div class="nomeInput">
+                <label for="nomeEstoqueCadastro">*Nome</label>
+                <input type="text" name="nomeEstoqueCadastro" id="nomeEstoqueCadastro">
+            </div>
+            <div class="localInput">
+                <label for="localEstoqueCadastro">*Local</label>
+                <input type="text" name="localEstoqueCadastro" id="localEstoqueCadastro">
+            </div>
+        </form>
+        <div id="output-estoque"></div>
+    </main>
+</body>
+</html>

@@ -24,7 +24,7 @@ header{
 }
 nav{
     max-width: 400px;
-    margin: 5px auto;
+    margin: 15px auto 15px auto;
 }
 .links{
     font-size: 15px;
@@ -33,77 +33,35 @@ nav{
     padding: 5px;
     border-radius: 10px;
     background-color: #afbbe1;
-    border: 0px;
     box-shadow: 1px 1px 3px black;
-    transform: scale(1);
-    transition: scale(0.3s);
+    text-decoration: none;
+    color: black;
 }
 .links:hover{
-    transform: scale(1.2);
     color: white;
     background-color: #92a4e0;
     box-shadow: 1px 1px 3px white;
 }
-.links:focus{
+.links:active{
     box-shadow: inset 1px 3px black;
-    transform: scale(1);
     color: black;
-    transition: 0.3s;
+}
+.link-desativo{
+    background-color: #92a4e0;
+    box-shadow: inset 1px 3px black;
+    color: black;
+    pointer-events: none;
 }
 main{
     background-color: #92a4e0;
-    max-width: 750px;
+    max-width: 1800px;
     margin: 0px auto;
-    padding: 20px 50px;
+    padding: 20px 10px;
     border-radius: 20px;
 }
 /* <- Principal -> */
 #principal{
-    display: none;
-    justify-content: center;
-    flex-flow: column wrap;
-}
-/* <- Cliente -> */
-#input-cliente, #output-cliente{
     display: flex;
-    flex-flow: column wrap;
-}
-#formCliente {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-}
-.cpfCnpjInput>input{
-    width: 156px;
-}
-#formCliente>div{
-    height: 20px;
-}
-/* <- Proutos -> */
-#input-produto, #output-produto{
-    display: none;
     justify-content: center;
     flex-flow: column wrap;
-    align-items: center;
-}
-#formProduto {
-    display: none;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-}
-/* <- Estoque -> */
-#input-estoque, #output-estoque{
-    display: none;
-    justify-content: center;
-    flex-flow: column wrap;
-    align-items: center;
-}
-#formEstoque {
-    display: none;
-    flex-wrap: wrap;
-    gap: 5px;
-    background-color: aquamarine;
-    justify-content: center;
 }

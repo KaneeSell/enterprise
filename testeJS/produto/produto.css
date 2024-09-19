@@ -1,0 +1,13 @@
+/* <- Proutos -> */
+#input-produto, #output-produto{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+}
+#formProduto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}

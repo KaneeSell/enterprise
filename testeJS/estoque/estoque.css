@@ -1,0 +1,13 @@
+/* <- Estoque -> */
+#input-estoque, #output-estoque{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+}
+#formEstoque {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}

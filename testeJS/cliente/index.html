@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./cliente.css"> <!-- Style Cliente -->
+    <script src="../script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Alpha</h1>
+    </header>
+    <nav>
+        <a href="../index.html"class="links">Principal</a>
+        <a href="#"class="links link-desativo">Cliente</a>
+        <a href="../produto/index.html"class="links">Produto</a>
+        <a href="../estoque/index.html"class="links">Estoque</a>
+    </nav>
+    <main>
+        <div id="cliente">
+            <script src="cliente.js"></script>
+            <script src="validadorCPF.js"></script>
+            <h2>Cliente</h2>
+            <input type="button" value="Cadastrar" class="links" onclick="ativCadastroCliente()">
+            <!-- <input type="button" value="Procurar" class="botao" onclick="ativProcurarCliente()"> -->
+            <form id="formCliente">
+                <p>Cadastrar:</p>
+                <label for="inputNomeCliente">*Nome:</label>
+                <input type="text" name="cliente" id="inputNomeCliente" size="20px"><br>
+                <div class="checkbox-wrapper-10">
+                    <input class="tgl tgl-flip" id="cb5" type="checkbox" checked />
+                    <label class="tgl-btn" data-tg-off="CPF" data-tg-on="CNPJ" for="cb5"></label>
+                </div>
+                <input type="text" name="cliente" id="inputCnpjCliente" size="15px" maxlength="14" oninput="mascararCPF()"><br>
+                <label for="inputAtivoCliente">Ativo?</label>
+                <input type="checkbox" name="ativo?" id="inputAtivoCliente" checked>
+                <input class="links" type="submit" value="Criar" onclick="criarCliente(event)">
+                <div id="erroNomeCadastroCliente"></div>
+            </form>
+            <form id="formProcurarCliente">
+                <p>Procurar:</p>
+                <label for="inputNomeProcuraCliente">Nome:</label>
+                <input type="text" name="cliente" id="inputNomeProcuraCliente"  oninput="procurarCliente(event)" size="10px">
+                <select name="statusSeletorCliente" id="statusSeletorCliente" oninput="procurarCliente(event)">
+                    <option value="">Todos</option>
+                    <option value="Sim">Ativos</option>
+                    <option value="Não">Inativos</option>
+                </select><br>
+                <button class="links" id="download" onclick="baixarClientes()">Baixar Clientes</button>
+                <br>
+                <input type="file" class="links" id="upload" accept=".json">
+                <div id="ClienteLogUpload"></div>
+                <div id="procurarCadastroClienteLog"></div>
+                <div id="procurarCadastroCliente"></div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+<script src="./cliente.js"></script> <!-- Script Cliente -->
