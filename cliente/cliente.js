@@ -16,7 +16,6 @@ document.getElementById('upload').addEventListener('change', function(event) {
             try {
                 // Parseia o conteúdo do arquivo JSON
                 const clientes = JSON.parse(e.target.result);
-                
                 // Verifica se o arquivo tem o formato correto
                 if (Array.isArray(clientes)) {
                     // Salva o JSON no localStorage
@@ -42,7 +41,7 @@ document.getElementById('upload').addEventListener('change', function(event) {
         reader.readAsText(file);
     }
 });
-//Baixar Clientes.JSON
+// Baixar Clientes.JSON
 function baixarClientes() {
     // Obtém os dados da chave 'clientes' do localStorage
     const clientes = localStorage.getItem("clientes");
@@ -61,7 +60,7 @@ function baixarClientes() {
     // Libera o objeto URL
     URL.revokeObjectURL(link.href);
 };
-//Zerar Clientes
+// Zerar Clientes
 function zerarClientes(){
     const pass = prompt('Tem certeza que deseja Zerar todos os clientes cadastrados? Digite: ZERAR TUDO')
     if(pass == 'ZERAR TUDO'){
@@ -72,10 +71,10 @@ function zerarClientes(){
         alert('Operação ZERAR CLIENTES Abortada!')
     }
 }
-//Ativar div Cliente
+// Ativar div Cliente
 function ativCliente(){
 }
-//Ativar div Cadastro
+// Ativar div Cadastro
 function ativCadastroCliente(){
     let propriedadeCadastro = elementoStyle("formCliente", "display")
     if(propriedadeCadastro == "none"){
@@ -88,7 +87,7 @@ function ativCadastroCliente(){
         document.forms["formCliente"]["inputAtivoCliente"].checked = true
     }
 }
-//Criar Cliente
+// Criar Cliente
 function criarCliente(e){
     e.preventDefault();
     if(!(JSON.parse(localStorage.getItem('clientes')))){localStorage.setItem('clientes', JSON.stringify([]))}

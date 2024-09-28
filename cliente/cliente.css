@@ -141,6 +141,9 @@
 #inputNomeCliente, #inputNomeProcuraCliente, #inputCnpjCliente{
     margin: 0px 0px 10px 0px;
 }
+.seletor{
+    width: 70px;
+}
 /*Button CPF e CNPJ Style*/
 .checkbox-wrapper-10 .tgl {
     display: none;
